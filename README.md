@@ -1,16 +1,16 @@
 # intro2Rmd
 
-An introductory eco-data science course for R markdown
+An introductory [eco-data science](https://eco-data-science.github.io/) course for R markdown
 
 ## Getting started
 
-Before we get to play with R markdound, we need to make sure you have the latest versions of R and R Studio. Then, I'll give a list of basic R packages that we will use, and then some instructions on how to download the materials in this repository (the stuff you see above).
+Before we get to play with R markdown, we need to make sure you have the latest versions of R and R Studio. Then, I'll give a list of basic R packages that we will use, and then some instructions on how to download the materials in this repository (the stuff you see above).
 
 Although it may seem like a lot, it is important that you follow these instructions. This will reduce the chances of running into errors during the workshop, and will help us get through the material. It will not take more than 5 minutes, but make sure you do it well in advance of the workshop. We don't want surprises right before we start, do we?
 
 ### R and R Studio
 
-Remember that R and R Studio are two separate things. For now, let's say R is the engine that runs the code, and R Studio is the IDE (Integrated Development Environment... wich is a fancy User Interface) that allows you to interact with R.
+Remember that R and R Studio are two separate things. For now, let's say R is the engine that runs the code, and R Studio is the IDE (Integrated Development Environment... which is a fancy User Interface) that allows you to interact with R.
 
 #### Check for updates
 
@@ -57,7 +57,7 @@ The basic packages we will need are:
 - [`knitr`](https://cran.r-project.org/web/packages/knitr/index.html): A General-Purpose Package for Dynamic Report Generation in R
 - [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/index.html): Construct Complex Table with 'kable' and Pipe Syntax
 
-To install them, **one by one**, copy-paste the following ines of code into your console and hit "Enter". You want to wait for a package to finish installing before you install the next one just to make sure there are no problems, This will also make it easier to troubleshoot anything ona a package-by-package basis. This might take a couple of minutes, but be patient.
+To install them, **one by one**, copy-paste the following lines of code into your console and hit "Enter". You want to wait for a package to finish installing before you install the next one just to make sure there are no problems, This will also make it easier to troubleshoot anything on a a package-by-package basis. This might take a couple of minutes, but be patient.
 
 ```
 install.packages("rmarkdown")
@@ -69,5 +69,18 @@ install.packages("kableExtra")
 ### Getting the course materials
 
 - If you are familiar with git and github, you can just go ahead and fork/clone this repository.
-- If you have no idea what that means, it's ok. We will have an intro to git and github soon. In the mean time, you can go to the 
+- If you have no idea what that means, it's OK. We will have an intro to git and github soon. In the mean time, you can go to the green button that says "Clone or Download"
+- Click in "Download zip", and a compressed folder will download to your computer.
+- Extract those files and you should be good to go!
+
+![Clone or Download](./Images/DownloadRepo.png)
+
+### Feeling ready?
+
+If you think you want to get a head start on R markdown, that is great! Here are some links you might find interesting to start playing with this.
+
+- [R markdown page](http://rmarkdown.rstudio.com/)
+- [R markdown reference guide](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
+- [R markdown cheetsheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf)
+
 

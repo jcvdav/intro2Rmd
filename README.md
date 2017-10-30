@@ -12,6 +12,8 @@ Although it may seem like a lot, it is important that you follow these instructi
 
 Remember that R and R Studio are two separate things. For now, let's say R is the engine that runs the code, and R Studio is the IDE (Integrated Development Environment... wich is a fancy User Interface) that allows you to interact with R.
 
+#### Check for updates
+
 1. First, make sure you have the latest releases of R and R Studio. If you have never installed them, skip this and go to the next step.
 
   - Open R Studio
@@ -33,9 +35,10 @@ Running under: Windows >= 8 x64 (build 9200)
 
   - To see if you are running the latest version of R Studio, use your toolbar to navigate to `Help/Check for Updates`
 
-![Navigate to Help/Check for Updates](./Images/CheckUpdates1.png)![In my case, I am up to date](./Images/CheckUpdates2.png)
+![Navigate to Help/Check for Updates](./Images/CheckUpdates1.png)
+![In my case, I am up to date](./Images/CheckUpdates2.png)
 
-
+#### Get the updates
 
 2. If you have never installed R and R Studio, or need to update them, here are the links. If for any reason they don't work, you can always ask Google.
 
@@ -64,4 +67,7 @@ install.packages("kableExtra")
 ```
 
 ### Getting the course materials
+
+- If you are familiar with git and github, you can just go ahead and fork/clone this repository.
+- If you have no idea what that means, it's ok. We will have an intro to git and github soon. In the mean time, you can go to the 
 

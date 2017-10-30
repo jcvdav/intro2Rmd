@@ -68,6 +68,10 @@ install.packages("kableExtra")
 
 ### Getting the course materials
 
+If you have made it this far, it means you are ready to download the course materials. However, you might want to wait until Tuesday afternoon / night before you do this, as I will be adding and modifying the materials right until before the workshop.
+
+So, getting the materials...
+
 - If you are familiar with git and github, you can just go ahead and fork/clone this repository.
 - If you have no idea what that means, it's OK. We will have an intro to git and github soon. In the mean time, you can go to the green button that says "Clone or Download"
 - Click in "Download zip", and a compressed folder will download to your computer.

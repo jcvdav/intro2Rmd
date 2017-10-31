@@ -6,9 +6,14 @@ output:
   ioslides_presentation:
     fig_caption: yes
     transition: faster
+  html_notebook:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: false
 subtitle: An eco-data-science workshop
 bibliography: references.bib
-# csl: ieee.csl
+csl: Citation_styles/ieee.csl
 ---
 
 ## Outline
@@ -145,7 +150,15 @@ Gives:
 You need:
 
 - A bibTex file (provided in the CourseMaterials folder)
+- Specify `bibliography:` and `csl:` in the header
 - That's it...
+
+```
+---
+bibliography: references.bib
+csl: Citation_styles/ieee.csl
+---
+```
 
 "A tidy dataset has one column per variable" `[@wickham_2014]`
 
@@ -161,7 +174,7 @@ You need:
 
 ## Load packages
 
-```{r}
+```{r load packages}
 suppressPackageStartupMessages({
   library(stargazer)
   library(knitr)
@@ -189,26 +202,27 @@ suppressPackageStartupMessages({
 ## `echo = TRUE`
 
 ```{r fit lm, echo = TRUE}
-model <- lm(mpg ~ disp, mtcars)
-summary(model)
+model <- lm(mpg ~ disp, mtcars) #Fit a linear model
+summary(model) # Look at the summary of the model
 ```
 
 ## `echo = FALSE`
 
 ```{r fit lm again, echo = FALSE}
-model <- lm(mpg ~ disp, mtcars)
-summary(model)
+model <- lm(mpg ~ disp, mtcars) #Fit a linear model
+summary(model) # Look at the summary of the model
 ```
 
 ## Fancier way to report models with `stargazer` {.smaller}
 
 ```{r use stargazer, results= 'asis'}
-stargazer::stargazer(model, type = "html")
+stargazer::stargazer(model, type = "html") #Create a regression table of the model
 ```
 
 ## Fancier way to report models with `stargazer` {.smaller}
 
 ```{r use fancy stargazer, results= 'asis'}
+# Create a customized regression table of the model
 stargazer::stargazer(model,
                      title = "Results of regressing miles per galon on displacement",
                      type = "html",
@@ -222,7 +236,7 @@ stargazer::stargazer(model,
 ## Figures with code
 
 ```{r plot, echo = TRUE, fig.cap = "This is my caption"}
-plot(mtcars$disp, mtcars$mpg, col = mtcars$cyl, pch = 20)
+plot(mtcars$disp, mtcars$mpg, col = mtcars$cyl, pch = 20, xlab = "Disp (cu. in.)", ylab = "mpg") # Plot the model
 ```
 
 ## Tables {.smaller}
@@ -253,9 +267,9 @@ Content Cell  | Content Cell
 ## Tables {.smaller}
 
 ```{r first table}
-taxa_table <- read.csv("taxa_table.csv")
+taxa_table <- read.csv("Data/taxa_table.csv") #Load the data
 
-knitr::kable(taxa_table)
+knitr::kable(taxa_table) # Create a table of the data
 ```
 
 ## California's State Fish {.smaller}
@@ -273,7 +287,7 @@ But scientific names (*Genus species*) are supposed to be in itallics!
 ```{r fancier table}
 knitr::kable(taxa_table, format = "html") %>% 
   kableExtra::kable_styling() %>% 
-  kableExtra::column_spec(column = 2, italic = T) %>% 
+  kableExtra::column_spec(column = 2, italic = T) %>% #specify column styles
   kableExtra::column_spec(column = 3, italic = T) %>% 
   kableExtra::column_spec(column = 4, bold = T)
 ```
@@ -285,10 +299,10 @@ knitr::kable(taxa_table, format = "html") %>%
 ```{r fancier fancier table}
 knitr::kable(taxa_table, format = "html") %>% 
   kableExtra::kable_styling() %>% 
-  kableExtra::column_spec(column = 2, italic = T) %>% 
+  kableExtra::column_spec(column = 2, italic = T) %>% # Specify column styles
   kableExtra::column_spec(column = 3, italic = T) %>% 
   kableExtra::column_spec(column = 4, bold = T) %>% 
-  kableExtra::collapse_rows(columns = c(1,2))
+  kableExtra::collapse_rows(columns = c(1,2)) #collapse some rowws to delete obvious information
 ```
 
 ## Short example of workflow

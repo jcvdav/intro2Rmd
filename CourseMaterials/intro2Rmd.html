@@ -274,6 +274,36 @@ output: ioslides_presentation
 
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Hands-on</h2></hgroup><article  id="hands-on">
 
+</article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references">
+
+<p>You need:</p>
+
+<ul>
+<li>A bibTex file (provided in the CourseMaterials folder)</li>
+<li>Specify <code>bibliography:</code> and <code>csl:</code> in the header</li>
+<li>That&#39;s it&#8230;</li>
+</ul>
+
+<pre >---
+bibliography: references.bib
+csl: Citation_styles/ieee.csl
+---</pre>
+
+<p>&quot;A tidy dataset has one column per variable&quot; <code>[@wickham_2014]</code></p>
+
+<p>&quot;A tidy dataset has one column per variable&quot; <span class="cite">[1]</span></p>
+
+<p><strong>References</strong></p>
+
+<div id="refs">
+<div id="ref-wickham_2014">
+<p>[1] H. Wickham, “Tidy data,” <em>J Stat Softw</em>, vol. 59, no. 10, 2014.</p></div></div>
+
+<ul>
+<li><p><a href='http://editor.citationstyles.org/about/' title=''>Citation style library</a></p></li>
+<li><p>Tyler Clavelle has a great <a href='https://tclavelle.github.io/blog/reference_tips/' title=''>tutorial</a> on this</p></li>
+</ul>
+
 </article></slide><slide class=''><hgroup><h2>Load packages</h2></hgroup><article  id="load-packages">
 
 <pre class = 'prettyprint lang-r'>suppressPackageStartupMessages({
@@ -281,30 +311,6 @@ output: ioslides_presentation
   library(knitr)
   library(kableExtra)
 })</pre>
-
-</article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references">
-
-<p>You need:</p>
-
-<ul>
-<li>A bibTex file (provided in the CourseMaterials folder)</li>
-<li>That&#39;s it&#8230;</li>
-</ul>
-
-<p>&quot;A tidy dataset has one column per variable&quot; <code>[@wickham_2014]</code></p>
-
-<p>&quot;A tidy dataset has one column per variable&quot; <span class="cite">(Wickham 2014)</span></p>
-
-<p><strong>References</strong></p>
-
-<div id="refs">
-<div id="ref-wickham_2014">
-<p>Wickham, Hadley. 2014. “Tidy Data.” <em>J Stat Softw</em> 59 (10). doi:<a href='https://doi.org/10.18637/jss.v059.i10' title=''>10.18637/jss.v059.i10</a>.</p></div></div>
-
-<ul>
-<li><p><a href='http://editor.citationstyles.org/about/' title=''>Citation style library</a></p></li>
-<li><p>Tyler Clavelle has a great <a href='https://tclavelle.github.io/blog/reference_tips/' title=''>tutorial</a> on this</p></li>
-</ul>
 
 </article></slide><slide class=''><hgroup><h2>Code chunks and in-line code</h2></hgroup><article  id="code-chunks-and-in-line-code">
 
@@ -891,7 +897,7 @@ Content Cell  | Content Cell</pre>
 
 </article></slide><slide class=''><hgroup><h2>Tables</h2></hgroup><article  id="tables-2" class="smaller">
 
-<pre class = 'prettyprint lang-r'>taxa_table &lt;- read.csv(&quot;taxa_table.csv&quot;)
+<pre class = 'prettyprint lang-r'>taxa_table &lt;- read.csv(&quot;Data/taxa_table.csv&quot;)
 
 knitr::kable(taxa_table)</pre>
 

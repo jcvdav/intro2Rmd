@@ -8,7 +8,7 @@ output:
     fig_height: 2
     fig_width: 6
 bibliography: references.bib
-# csl: ieee.csl
+csl: Citation_styles/ieee.csl
 ---
 
 # Abstract
@@ -25,7 +25,7 @@ There are many fish in California. They have widely been studied [@love_2011].
 
 # Methods
 
-We counted fish and surfers, and placed them into tidy dataset [@wickham_2014]
+We counted fish and surfers, and placed them into tidy dataset [@wickham_2014]. Raw data are provided in Appendix 1.
 
 # Results
 
@@ -41,7 +41,7 @@ suppressPackageStartupMessages({
 ```
 
 ```{r load data}
-taxa_table <- read.csv("taxa_table.csv")
+taxa_table <- read.csv("Data/taxa_table.csv")
 ```
 
 Our extensive survey identified a total of `r sum(taxa_table$Surfers)` Surfers and `r sum(taxa_table$Count)`, with `r length(unique(taxa_table$Species))` species, distributed along `r length(unique(taxa_table$Genus))` Genus and `r length(unique(taxa_table$Family))` Families. 
@@ -70,7 +70,20 @@ Surfers scare fish.
 
 # References
 
+<div id="refs"></div>
 
+\clearpage
 
+```{r appendix data}
+wide_taxa_table <- cbind(taxa_table, taxa_table)
+
+knitr::kable(wide_taxa_table, format = "latex", caption = "Appendix 1. Table with raw data") %>% 
+  kableExtra::kable_styling() %>% 
+  kableExtra::column_spec(column = 2, italic = T) %>% 
+  kableExtra::column_spec(column = 3, italic = T) %>% 
+  kableExtra::column_spec(column = 4, bold = T) %>% 
+  kableExtra::collapse_rows(columns = c(1,2)) %>% 
+  kableExtra::landscape()
+```
 
 

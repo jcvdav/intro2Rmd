@@ -1,35 +1,257 @@
 ---
-title: "intro2Rmd"
+title: "Introduction to R Markdown"
 author: "Villaseñor-Derbez, J.C."
-date: "29 de octubre de 2017"
-output: ioslides_presentation
+date: "Nov 1^st^, 2017"
+output:
+  ioslides_presentation:
+    transition: faster
+  html_notebook:
+    fig_caption: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: no
+subtitle: An eco-data-science workshop
+bibliography: references.bib
+# csl: ieee.csl
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+# What and why?
+
+## What is this?
+
+- Markdown is:
+    - a lightweight markup language
+    - easy-to-read, easy-to-write plain text that gets converted into HTML
+- R Markdown is:
+    -  The above + R Code embeded to create graphs, tables, values... any type of R output
+- `knitr`, which is a package, helps us convert \*.Rmd files ino other formats with the use of `pandoc`
+
+- "But remember, Markdown was designed for HTML, and LaTeX was for PDF and related output formats." Yihui Xie
+
+- See Yihui's discussion on [Markdown vs. LaTeX](https://yihui.name/en/2013/10/markdown-or-latex/)
+
+## Why?
+
+- It is great for research
+- It fosters reproducibility
+
+# My first Rmd (just text)
+
+## New Rmd document and types of output
+
+- Slides
+- **HTML**
+- PDF
+- Word
+- Shiny
+
+## YAML
+
+- Set of `key:` and `value` pairs
+- Contains information passed to `knitr` and `pandoc`
+- The default one looks like this:
+
+```
+---
+title: "Fancy title"
+author: "Me"
+date: "November 1, 2017"
+output: html_document
+---
 ```
 
-## R Markdown
+## YAML
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+- You can also specify many other things:
+- `fig_caption: yes` adds automatic figure numbering
+- `toc: yes` adds a table of contents
+- `subtitle:"Fancy subtitle"` adds a subtitle
+- `bibliography: references.bib` specifies where to look for bibTex entries
+- `csl: plos.csl` specifies citation format (in this case, PLoS ONE's)
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) and [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html) output
 
-## Slide with Bullets
+## Basic syntax
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- `*single asterisks*` give me *single asterisks*
+- `**double asterisks**` give me **double asterisks**
+- `m s^-2^` is then m s^-2^
+- You can write LaTeX equations by wrapping an expression in `$`: 
+    - `$E = mC^2$` is $E = mC^2$
+- Write greek letters with `$\letter$`:
+    - `$\beta$` gives you $\beta$
+- Same for fancier equations:
+    - `$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$` is just: $\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$
 
-## Slide with R Output
+## Images and links
 
-```{r cars, echo = TRUE}
-summary(cars)
+- Specify a link: `[go to google](www.google.com)`
+- and see [go to google](www.google.com)
+
+- You can insert images saved on your computer, or from the web:
+    - image: `![Figure caption](Img/RStudio-Ball.png)`
+    - ![Figure caption](Img/RStudio-Ball.png)
+
+# Hands-on
+
+## Load packages
+
+```{r}
+suppressPackageStartupMessages({
+  library(stargazer)
+  library(knitr)
+  library(kableExtra)
+})
 ```
 
-## Slide with Plot
 
-```{r pressure}
-plot(pressure)
+## References
+
+You need:
+
+- A bibTex file (provided in the CourseMaterials folder)
+- That's it...
+
+"A tidy dataset has one column per variable" `[@wickham_2014]`
+
+"A tidy dataset has one column per variable" [@wickham_2014]
+
+**References**
+
+<div id="refs"></div>
+
+- [Citation style library](http://editor.citationstyles.org/about/)
+
+- Tyler Clavelle has a great [tutorial](https://tclavelle.github.io/blog/reference_tips/) on this
+
+## Code chunks and in-line code
+
+- You can type in-line code with back-quotes `r 2+2`
+- You can type in-line code with `r 2 + 2`
+
+- Used to isolate plain text from code
+- Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
+- Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
+
+## Code chunk options
+- `echo` hides code from output
+- `eval` evaluate chunk?
+- `fig.width`
+- `fig.height`
+
+## `echo = TRUE`
+
+```{r, echo = TRUE}
+model <- lm(mpg ~ disp, mtcars)
+summary(model)
 ```
 
+## `echo = FALSE`
+
+```{r, echo = FALSE}
+model <- lm(mpg ~ disp, mtcars)
+summary(model)
+```
+
+## Fancier way to report models with `stargazer` {.smaller}
+
+```{r, results= 'asis'}
+stargazer::stargazer(model, type = "html")
+```
+
+## Fancier way to report models with `stargazer` {.smaller}
+
+```{r, results= 'asis'}
+stargazer::stargazer(model,
+                     title = "Results of regressing miles per galon on displacement",
+                     type = "html",
+                     single.row = T,
+                     covariate.labels = "Displacement (cu. in.)",
+                     omit.stat = "adj.rsq")
+```
+
+- Awesome [examples by Jake Russ](http://www.jakeruss.com/cheatsheets/stargazer/)
+
+## Figures with code
+
+```{r, echo = TRUE}
+plot(mtcars$disp, mtcars$mpg, col = mtcars$cyl, pch = 20)
+```
+
+## Tables {.smaller}
+
+- You can create raw markdown tables:
+
+You type this:
+
+```
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+```
+
+It looks like this:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+## Tables
+
+- The above was not great for tables that summarize data, instead, use `knitr::kable()`
+- Using the `taxa_table.csv` file in the `CourseMaterials`
+
+## Tables {.smaller}
+
+```{r}
+
+taxa_table <- read.csv("taxa_table.csv")
+
+knitr::kable(taxa_table)
+
+```
+
+## Fancier tables with `kableExtra` {.smaller}
+
+- Specify format by columns
+
+```{r}
+knitr::kable(taxa_table, format = "html") %>% 
+  kableExtra::kable_styling() %>% 
+  kableExtra::column_spec(column = 2, italic = T) %>% 
+  kableExtra::column_spec(column = 3, italic = T) %>% 
+  kableExtra::column_spec(column = 4, bold = T)
+```
+
+## Fancier tables with `kableExtra` {.smaller}
+
+- Collapse rows
+
+```{r}
+knitr::kable(taxa_table, format = "html") %>% 
+  kableExtra::kable_styling() %>% 
+  kableExtra::column_spec(column = 2, italic = T) %>% 
+  kableExtra::column_spec(column = 3, italic = T) %>% 
+  kableExtra::column_spec(column = 4, bold = T) %>% 
+  kableExtra::collapse_rows(columns = c(1,2))
+```
+
+## Nicer, fancier tables
+
+# Show and tell
+
+## Show and tell
+
+- `<div id="refs"></div>` to specify placement of references (*i.e.* when you are writing a manuscript)
+- To add line numbers and doblespacing to your manuscript, add to the YAML:
+
+```
+header-includes:
+- \usepackage{setspace}
+- \doublespacing
+- \usepackage{lineno}
+- \linenumbers
+```

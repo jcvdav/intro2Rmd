@@ -98,7 +98,24 @@
           </hgroup>
   </slide>
 
-<slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>What and why?</h2></hgroup><article  id="what-and-why">
+<slide class=''><hgroup><h2>Outline</h2></hgroup><article  id="outline">
+
+<ul>
+<li>What and Why</li>
+<li>Getting started
+
+<ul>
+<li>Syntax and basic elements</li>
+</ul></li>
+<li>Hands-on
+
+<ul>
+<li>Using code to produce output</li>
+</ul></li>
+<li>Show and tell</li>
+</ul>
+
+</article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>What and why?</h2></hgroup><article  id="what-and-why">
 
 </article></slide><slide class=''><hgroup><h2>What is this?</h2></hgroup><article  id="what-is-this">
 
@@ -176,9 +193,10 @@ output: ioslides_presentation
 
 <p>See <a href='http://rmarkdown.rstudio.com/html_document_format.html' title=''>options for HTML</a> and <a href='http://rmarkdown.rstudio.com/pdf_document_format.html' title=''>options for PDF</a> output</p>
 
-</article></slide><slide class=''><hgroup><h2>Basic syntax</h2></hgroup><article  id="basic-syntax">
+</article></slide><slide class=''><hgroup><h2>Basic syntax</h2></hgroup><article  id="basic-syntax" class="smaller">
 
 <ul>
+<li>Use <code>#</code> to indicate headers</li>
 <li><code>*single asterisks*</code> give me <em>single asterisks</em></li>
 <li><code>**double asterisks**</code> give me <strong>double asterisks</strong></li>
 <li><code>m s^-2^</code> is then m s<sup>-2</sup></li>
@@ -295,7 +313,8 @@ output: ioslides_presentation
 <li><p>There were 32 cars studied</p></li>
 <li>Used to isolate plain text from code</li>
 <li>Allow you to execute R, Python, Rcpp, SQL, and Stan within your file</li>
-<li><p>Use <code>Ctrl</code> + <code>Alt</code> + <code>I</code> (Windows) <code>Cmd</code> + <code>Alt</code> + <code>I</code> (Mac) to insert</p></li>
+<li>Use <code>Ctrl</code> + <code>Alt</code> + <code>I</code> (Windows) <code>Cmd</code> + <code>Alt</code> + <code>I</code> (Mac) to insert</li>
+<li><p>Always name your chunks!</p></li>
 </ul>
 
 </article></slide><slide class=''><hgroup><h2>Code chunk options</h2></hgroup><article  id="code-chunk-options">
@@ -882,48 +901,56 @@ knitr::kable(taxa_table)</pre>
 <th align="left">Genus</th>
 <th align="left">Species</th>
 <th align="right">Count</th>
+<th align="right">Surfers</th>
 </tr>
 <tr class="odd">
 <td align="left">Pomacentridae</td>
 <td align="left">Hypsypops</td>
 <td align="left">rubicundus</td>
 <td align="right">1</td>
+<td align="right">20</td>
 </tr>
 <tr class="even">
 <td align="left">Polyprionidae</td>
 <td align="left">Stereolepis</td>
 <td align="left">gigas</td>
 <td align="right">2</td>
+<td align="right">18</td>
 </tr>
 <tr class="odd">
 <td align="left">Scorpaenidae</td>
 <td align="left">Sebastes</td>
 <td align="left">hopkinsi</td>
 <td align="right">30</td>
+<td align="right">10</td>
 </tr>
 <tr class="even">
 <td align="left">Scorpaenidae</td>
 <td align="left">Sebastes</td>
 <td align="left">paucispinis</td>
 <td align="right">45</td>
+<td align="right">1</td>
 </tr>
 <tr class="odd">
 <td align="left">Scorpaenidae</td>
 <td align="left">Pterois</td>
 <td align="left">volitans</td>
 <td align="right">62</td>
+<td align="right">2</td>
 </tr>
 <tr class="even">
 <td align="left">Serranidae</td>
 <td align="left">Paralabrax</td>
 <td align="left">clathratus</td>
 <td align="right">12</td>
+<td align="right">8</td>
 </tr>
 <tr class="odd">
 <td align="left">Serranidae</td>
 <td align="left">Paralabrax</td>
 <td align="left">nebulifer</td>
 <td align="right">15</td>
+<td align="right">12</td>
 </tr>
 </table>
 
@@ -979,6 +1006,12 @@ Count
 
 </th>
 
+<th style="text-align:right;">
+
+Surfers
+
+</th>
+
 </tr>
 
 </thead>
@@ -1011,6 +1044,12 @@ rubicundus
 
 </td>
 
+<td style="text-align:right;">
+
+20
+
+</td>
+
 </tr>
 
 <tr>
@@ -1036,6 +1075,12 @@ gigas
 <td style="text-align:right;font-weight: bold;">
 
 2
+
+</td>
+
+<td style="text-align:right;">
+
+18
 
 </td>
 
@@ -1067,6 +1112,12 @@ hopkinsi
 
 </td>
 
+<td style="text-align:right;">
+
+10
+
+</td>
+
 </tr>
 
 <tr>
@@ -1092,6 +1143,12 @@ paucispinis
 <td style="text-align:right;font-weight: bold;">
 
 45
+
+</td>
+
+<td style="text-align:right;">
+
+1
 
 </td>
 
@@ -1123,6 +1180,12 @@ volitans
 
 </td>
 
+<td style="text-align:right;">
+
+2
+
+</td>
+
 </tr>
 
 <tr>
@@ -1151,6 +1214,12 @@ clathratus
 
 </td>
 
+<td style="text-align:right;">
+
+8
+
+</td>
+
 </tr>
 
 <tr>
@@ -1176,6 +1245,12 @@ nebulifer
 <td style="text-align:right;font-weight: bold;">
 
 15
+
+</td>
+
+<td style="text-align:right;">
+
+12
 
 </td>
 
@@ -1228,6 +1303,12 @@ Count
 
 </th>
 
+<th style="text-align:right;">
+
+Surfers
+
+</th>
+
 </tr>
 
 </thead>
@@ -1260,6 +1341,12 @@ rubicundus
 
 </td>
 
+<td style="text-align:right;">
+
+20
+
+</td>
+
 </tr>
 
 <tr>
@@ -1285,6 +1372,12 @@ gigas
 <td style="text-align:right;font-weight: bold;">
 
 2
+
+</td>
+
+<td style="text-align:right;">
+
+18
 
 </td>
 
@@ -1316,6 +1409,12 @@ hopkinsi
 
 </td>
 
+<td style="text-align:right;">
+
+10
+
+</td>
+
 </tr>
 
 <tr>
@@ -1329,6 +1428,12 @@ paucispinis
 <td style="text-align:right;font-weight: bold;">
 
 45
+
+</td>
+
+<td style="text-align:right;">
+
+1
 
 </td>
 
@@ -1351,6 +1456,12 @@ volitans
 <td style="text-align:right;font-weight: bold;">
 
 62
+
+</td>
+
+<td style="text-align:right;">
+
+2
 
 </td>
 
@@ -1382,6 +1493,12 @@ clathratus
 
 </td>
 
+<td style="text-align:right;">
+
+8
+
+</td>
+
 </tr>
 
 <tr>
@@ -1395,6 +1512,12 @@ nebulifer
 <td style="text-align:right;font-weight: bold;">
 
 15
+
+</td>
+
+<td style="text-align:right;">
+
+12
 
 </td>
 

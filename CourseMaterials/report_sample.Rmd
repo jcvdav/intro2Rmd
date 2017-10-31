@@ -1,0 +1,76 @@
+---
+title: "Fish and Surfers"
+author: "Villaseñor-Derbez, J.C."
+date: "5 minutes before deadline"
+output: 
+  pdf_document: 
+    fig_caption: yes
+    fig_height: 2
+    fig_width: 6
+bibliography: references.bib
+# csl: ieee.csl
+---
+
+# Abstract
+
+We looked at fish and surfers, and draw wild, unsupported conclusions.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+There are many fish in California. They have widely been studied [@love_2011].
+
+# Methods
+
+We counted fish and surfers, and placed them into tidy dataset [@wickham_2014]
+
+# Results
+
+```{r load packages}
+#install.packages("tidyverse")
+
+suppressPackageStartupMessages({
+  library(stargazer)
+  library(knitr)
+  library(kableExtra)
+  library(tidyverse)
+})
+```
+
+```{r load data}
+taxa_table <- read.csv("taxa_table.csv")
+```
+
+Our extensive survey identified a total of `r sum(taxa_table$Surfers)` Surfers and `r sum(taxa_table$Count)`, with `r length(unique(taxa_table$Species))` species, distributed along `r length(unique(taxa_table$Genus))` Genus and `r length(unique(taxa_table$Family))` Families. 
+
+We tested the relationship between fish abundance and surfers (Fig. \ref{fig:fishplot}) with a linear regression with the form:
+
+$$Fish = \beta_0 + beta_1Surfers$$
+
+```{r plot data, fig.cap="\\label{fig:fishplot}Relationship between fish abundance and surfers"}
+ggplot(taxa_table, aes(x = Surfers, y = Count)) +
+  geom_point(aes(color = Family), size = 2) +
+  theme_bw() +
+  geom_smooth(method = "lm", color = "black", linetype = "dashed", alpha = 0.2)
+```
+
+\clearpage
+
+```{r, results = "asis"}
+model <- lm(Count ~ Surfers, taxa_table)
+stargazer::stargazer(model, header = F, single.row = T, omit.stat = "adj.rsq", title = "My results table!")
+```
+
+# Conclusions
+
+Surfers scare fish.
+
+# References
+
+
+
+
+

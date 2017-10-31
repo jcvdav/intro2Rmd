@@ -4,6 +4,7 @@ author: "Villaseñor-Derbez, J.C."
 date: "Nov 1^st^, 2017"
 output:
   ioslides_presentation:
+    fig_caption: yes
     transition: faster
   html_notebook:
     fig_caption: yes
@@ -24,10 +25,16 @@ bibliography: references.bib
     - a lightweight markup language
     - easy-to-read, easy-to-write plain text that gets converted into HTML
 - R Markdown is:
-    -  The above + R Code embeded to create graphs, tables, values... any type of R output
-- `knitr`, which is a package, helps us convert \*.Rmd files ino other formats with the use of `pandoc`
+    -  The above + R code embeded to create graphs, tables, values... any type of R output
+- `knitr`, which is an R package, transforms \*.Rmd into \*.md, which is then processed by `pandoc`
 
-- "But remember, Markdown was designed for HTML, and LaTeX was for PDF and related output formats." Yihui Xie
+![](Img/RMarkdownFlow.png)
+
+## Keep in mind
+
+### *"But remember, Markdown was designed for HTML, and LaTeX was for PDF and related output formats."*
+
+Yihui Xie
 
 - See Yihui's discussion on [Markdown vs. LaTeX](https://yihui.name/en/2013/10/markdown-or-latex/)
 
@@ -36,7 +43,7 @@ bibliography: references.bib
 - It is great for research
 - It fosters reproducibility
 
-# My first Rmd (just text)
+# Getting started (just text)
 
 ## New Rmd document and types of output
 
@@ -54,17 +61,17 @@ bibliography: references.bib
 
 ```
 ---
-title: "Fancy title"
-author: "Me"
+title: "Introduction to R Markdown"
+author: "Villaseñor-Derbez, J.C."
 date: "November 1, 2017"
-output: html_document
+output: ioslides_presentation
 ---
 ```
 
 ## YAML
 
 - You can also specify many other things:
-- `fig_caption: yes` adds automatic figure numbering
+- `fig_caption: yes` adds figure captions from chunks
 - `toc: yes` adds a table of contents
 - `subtitle:"Fancy subtitle"` adds a subtitle
 - `bibliography: references.bib` specifies where to look for bibTex entries
@@ -72,8 +79,9 @@ output: html_document
 
 See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) and [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html) output
 
-## Basic syntax
+## Basic syntax {.smaller}
 
+- Use `#` to indicate headers
 - `*single asterisks*` give me *single asterisks*
 - `**double asterisks**` give me **double asterisks**
 - `m s^-2^` is then m s^-2^
@@ -82,7 +90,41 @@ See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) a
 - Write greek letters with `$\letter$`:
     - `$\beta$` gives you $\beta$
 - Same for fancier equations:
-    - `$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$` is just: $\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$
+    - `$$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$$` is just: $$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$$
+    
+## Basic syntax: bullets
+
+- Bullets can be specified by -, +, or *
+
+```
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
+```
+
+Gives:
+
+* Item 1
+* Item 2
+    + Item 2a
+    + Item 2b
+
+## Basic synax: numbered bullets
+
+```
+1. Item 1
+2. Item 2
+3. Item 3
+    + Item 3a
+    + Item 3b
+```
+
+1. Item 1
+2. Item 2
+3. Item 3
+    + Item 3a
+    + Item 3b
 
 ## Images and links
 
@@ -127,42 +169,44 @@ You need:
 
 ## Code chunks and in-line code
 
-- You can type in-line code with back-quotes `r 2+2`
-- You can type in-line code with `r 2 + 2`
+- `There were "r nrow(mtcars)" cars studied`
+- There were `r nrow(mtcars)` cars studied
 
 - Used to isolate plain text from code
 - Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
 - Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
+- Always name your chunks!
 
 ## Code chunk options
 - `echo` hides code from output
 - `eval` evaluate chunk?
 - `fig.width`
 - `fig.height`
+- `fig.cap` To add figure caption
 
 ## `echo = TRUE`
 
-```{r, echo = TRUE}
+```{r fit lm, echo = TRUE}
 model <- lm(mpg ~ disp, mtcars)
 summary(model)
 ```
 
 ## `echo = FALSE`
 
-```{r, echo = FALSE}
+```{r fit lm again, echo = FALSE}
 model <- lm(mpg ~ disp, mtcars)
 summary(model)
 ```
 
 ## Fancier way to report models with `stargazer` {.smaller}
 
-```{r, results= 'asis'}
+```{r use stargazer, results= 'asis'}
 stargazer::stargazer(model, type = "html")
 ```
 
 ## Fancier way to report models with `stargazer` {.smaller}
 
-```{r, results= 'asis'}
+```{r use fancy stargazer, results= 'asis'}
 stargazer::stargazer(model,
                      title = "Results of regressing miles per galon on displacement",
                      type = "html",
@@ -175,7 +219,7 @@ stargazer::stargazer(model,
 
 ## Figures with code
 
-```{r, echo = TRUE}
+```{r plot, echo = TRUE, fig.cap = "This is my caption"}
 plot(mtcars$disp, mtcars$mpg, col = mtcars$cyl, pch = 20)
 ```
 
@@ -206,19 +250,25 @@ Content Cell  | Content Cell
 
 ## Tables {.smaller}
 
-```{r}
-
+```{r first table}
 taxa_table <- read.csv("taxa_table.csv")
 
 knitr::kable(taxa_table)
-
 ```
+
+## California's State Fish {.smaller}
+
+![Juvenile Garibaldi (*Hypsypops rubicundus*)](http://www.fishbase.org/images/species/Hyrub_j0.jpg)
+
+- October 15, 1995, Adopted as the California State Marine Fish
 
 ## Fancier tables with `kableExtra` {.smaller}
 
+But scientific names (*Genus species*) are supposed to be in itallics!
+
 - Specify format by columns
 
-```{r}
+```{r fancier table}
 knitr::kable(taxa_table, format = "html") %>% 
   kableExtra::kable_styling() %>% 
   kableExtra::column_spec(column = 2, italic = T) %>% 
@@ -230,7 +280,7 @@ knitr::kable(taxa_table, format = "html") %>%
 
 - Collapse rows
 
-```{r}
+```{r fancier fancier table}
 knitr::kable(taxa_table, format = "html") %>% 
   kableExtra::kable_styling() %>% 
   kableExtra::column_spec(column = 2, italic = T) %>% 
@@ -239,7 +289,12 @@ knitr::kable(taxa_table, format = "html") %>%
   kableExtra::collapse_rows(columns = c(1,2))
 ```
 
-## Nicer, fancier tables
+## Short example of workflow
+
+
+## Resources
+
+- [R Markdown from RStudio tutorial](http://rmarkdown.rstudio.com/lesson-1.html)
 
 # Show and tell
 

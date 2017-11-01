@@ -1,13 +1,36 @@
 ---
 title: "Testing R Markdown"
-author: "Villaseñor-Derbez, J.C."
+author: "VillaseÃ±or-Derbez, J.C."
 date: "31 de octubre de 2017"
-output: html_notebook
+output:
+  html_notebook: 
+    fig_caption: yes
+csl: Citation_styles/plos-one.csl
+bibliography: references.bib
 ---
 
 # Hands-on
 
 ## Explain the environment
+
+## Code and code shunks
+
+I have `r mean(c(2,3,5,7,1,10))` apples
+
+```{r, echo = F}
+suppressPackageStartupMessages({
+  library(knitr)
+  library(stargazer)
+  library(kableExtra)
+})
+```
+
+```{r, echo = F}
+model <- lm(mpg ~ disp + hp, mtcars)
+summary(model)
+```
+
+The intercept is `r coef(model)[1]`
 
 ## References
 
@@ -17,15 +40,17 @@ You need:
 - Specify `bibliography:` and `csl:` in the header
 - That's it...
 
+"A tidy dataset has a column for each variable" [@wickham_2014]
+
 **References**
+
+<div id = "refs"></div>
 
 ### Other resources for references
 
 - [Citation style library](http://editor.citationstyles.org/about/)
 
 - Tyler Clavelle has a great [tutorial](https://tclavelle.github.io/blog/reference_tips/) on this
-
-## Load packages
 
 ## Code chunk options
 
@@ -36,20 +61,27 @@ You need:
 - `fig.height`
 - `fig.cap` To add figure caption
 
-## `echo = TRUE`
-
-Fit a linear model (mpg ~ disp) and inspect with summary
-
-## `echo = FALSE`
-
-Same as above
-
 ## Fancier way to report models with `stargazer`
 
 results = 'asis'
 
+```{r, results = "asis"}
+
+model2 <- lm(mpg ~ disp, mtcars)
+stargazer::stargazer(model, model2, type = "html")
+```
+
+
 
 ## Fancier way to report models with `stargazer`
+
+```{r, results = "asis"}
+stargazer::stargazer(model, model2,
+                     single.row = T,
+                     type = "html",
+                     omit.stat = "rsq")
+```
+
 
 Modify stargazer with title, singe.row, covariate.labels, omit.stat
 
@@ -57,16 +89,35 @@ Modify stargazer with title, singe.row, covariate.labels, omit.stat
 
 ## Figures with code
 
+```{r, fig.cap="This is my caption"}
+plot(mtcars$disp, mtcars$mpg,xlab = "disp", ylab = "mpg")
+```
+
+
 Plot disp vs mpg
 
 ## Tables
 
 Create raw markdown table
 
+Title 1 | Title 2
+--------|--------
+Element 1 | Element 2
+Element 1 | Element 2
+Element 1 | Element 2
+Element 1 | Element 2
+Element 1 | Element 2
+
 
 ## Tables with `knitr` and `kable`
 
 Table from Data/taxa_table.csv and knitr
+
+```{r}
+taxa_table <- read.csv("Data/taxa_table.csv")
+knitr::kable(taxa_table)
+```
+
 
 Using the `taxa_table.csv` file in the `CourseMaterials`
 
@@ -80,11 +131,32 @@ Using the `taxa_table.csv` file in the `CourseMaterials`
 
 But scientific names (*Genus species*) are supposed to be in italics!
 
+```{r}
+knitr::kable(taxa_table, format = "html") %>%
+  kableExtra::kable_styling() %>%
+  kableExtra::column_spec(column = 2, italic = T) %>%
+  kableExtra::column_spec(column = 3, italic = T)
+```
+
+
 - Specify format by columns
 
 ## Fancier tables with `kableExtra`
 
 - Collapse rows for clarity
+
+```{r}
+knitr::kable(taxa_table, format = "html") %>%
+  kableExtra::kable_styling() %>%
+  kableExtra::column_spec(column = 2, italic = T) %>%
+  kableExtra::column_spec(column = 3, italic = T) %>%
+  kableExtra::collapse_rows(columns = 1)
+```
+
+```{r}
+plot(sdjfkjs)
+```
+
 
 ## If there is time
 

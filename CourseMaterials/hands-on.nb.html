@@ -9,7 +9,7 @@
 <meta name="generator" content="pandoc" />
 
 
-<meta name="author" content="Villaseñor-Derbez, J.C." />
+<meta name="author" content="VillaseÃ±or-Derbez, J.C." />
 
 
 <title>Testing R Markdown</title>
@@ -168,7 +168,7 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore">Testing R Markdown</h1>
-<h4 class="author"><em>Villaseñor-Derbez, J.C.</em></h4>
+<h4 class="author"><em>VillaseÃ±or-Derbez, J.C.</em></h4>
 <h4 class="date"><em>31 de octubre de 2017</em></h4>
 
 </div>
@@ -180,6 +180,40 @@ $(document).ready(function () {
 <div id="explain-the-environment" class="section level2">
 <h2>Explain the environment</h2>
 </div>
+<div id="code-and-code-shunks" class="section level2">
+<h2>Code and code shunks</h2>
+<p>I have 4.6666667 apples</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-output-begin eyJkYXRhIjoiXG5DYWxsOlxubG0oZm9ybXVsYSA9IG1wZyB+IGRpc3AgKyBocCwgZGF0YSA9IG10Y2FycylcblxuUmVzaWR1YWxzOlxuICAgIE1pbiAgICAgIDFRICBNZWRpYW4gICAgICAzUSAgICAgTWF4IFxuLTQuNzk0NSAtMi4zMDM2IC0wLjgyNDYgIDEuODU4MiAgNi45MzYzIFxuXG5Db2VmZmljaWVudHM6XG4gICAgICAgICAgICAgRXN0aW1hdGUgU3RkLiBFcnJvciB0IHZhbHVlIFByKD58dHwpICAgIFxuKEludGVyY2VwdCkgMzAuNzM1OTA0ICAgMS4zMzE1NjYgIDIzLjA4MyAgPCAyZS0xNiAqKipcbmRpc3AgICAgICAgIC0wLjAzMDM0NiAgIDAuMDA3NDA1ICAtNC4wOTggMC4wMDAzMDYgKioqXG5ocCAgICAgICAgICAtMC4wMjQ4NDAgICAwLjAxMzM4NSAgLTEuODU2IDAuMDczNjc5IC4gIFxuLS0tXG5TaWduaWYuIGNvZGVzOiAgMCDigJgqKirigJkgMC4wMDEg4oCYKirigJkgMC4wMSDigJgq4oCZIDAuMDUg4oCYLuKAmSAwLjEg4oCYIOKAmSAxXG5cblJlc2lkdWFsIHN0YW5kYXJkIGVycm9yOiAzLjEyNyBvbiAyOSBkZWdyZWVzIG9mIGZyZWVkb21cbk11bHRpcGxlIFItc3F1YXJlZDogIDAuNzQ4MixcdEFkanVzdGVkIFItc3F1YXJlZDogIDAuNzMwOSBcbkYtc3RhdGlzdGljOiA0My4wOSBvbiAyIGFuZCAyOSBERiwgIHAtdmFsdWU6IDIuMDYyZS0wOVxuIn0= -->
+<pre><code>
+Call:
+lm(formula = mpg ~ disp + hp, data = mtcars)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-4.7945 -2.3036 -0.8246  1.8582  6.9363 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 30.735904   1.331566  23.083  &lt; 2e-16 ***
+disp        -0.030346   0.007405  -4.098 0.000306 ***
+hp          -0.024840   0.013385  -1.856 0.073679 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.127 on 29 degrees of freedom
+Multiple R-squared:  0.7482,    Adjusted R-squared:  0.7309 
+F-statistic: 43.09 on 2 and 29 DF,  p-value: 2.062e-09</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>The intercept is 30.7359042</p>
+</div>
 <div id="references" class="section level2">
 <h2>References</h2>
 <p>You need:</p>
@@ -188,7 +222,13 @@ $(document).ready(function () {
 <li>Specify <code>bibliography:</code> and <code>csl:</code> in the header</li>
 <li>That’s it…</li>
 </ul>
+<p>“A tidy dataset has a column for each variable” <span class="citation">[1]</span></p>
 <p><strong>References</strong></p>
+<div id="refs">
+<div id="ref-wickham_2014">
+<p>1. Wickham H. Tidy data. J Stat Softw. 2014;59. doi:<a href="https://doi.org/10.18637/jss.v059.i10">10.18637/jss.v059.i10</a></p>
+</div>
+</div>
 <div id="other-resources-for-references" class="section level3">
 <h3>Other resources for references</h3>
 <ul>
@@ -196,9 +236,6 @@ $(document).ready(function () {
 <li><p>Tyler Clavelle has a great <a href="https://tclavelle.github.io/blog/reference_tips/">tutorial</a> on this</p></li>
 </ul>
 </div>
-</div>
-<div id="load-packages" class="section level2">
-<h2>Load packages</h2>
 </div>
 <div id="code-chunk-options" class="section level2">
 <h2>Code chunk options</h2>
@@ -211,20 +248,360 @@ $(document).ready(function () {
 <li><code>fig.cap</code> To add figure caption</li>
 </ul>
 </div>
-<div id="echo-true" class="section level2">
-<h2><code>echo = TRUE</code></h2>
-<p>Fit a linear model (mpg ~ disp) and inspect with summary</p>
-</div>
-<div id="echo-false" class="section level2">
-<h2><code>echo = FALSE</code></h2>
-<p>Same as above</p>
-</div>
 <div id="fancier-way-to-report-models-with-stargazer" class="section level2">
 <h2>Fancier way to report models with <code>stargazer</code></h2>
 <p>results = ‘asis’</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubW9kZWwyIDwtIGxtKG1wZyB+IGRpc3AsIG10Y2FycylcbnN0YXJnYXplcjo6c3RhcmdhemVyKG1vZGVsLCBtb2RlbDIsIHR5cGUgPSBcImh0bWxcIilcbmBgYCJ9 -->
+<pre class="r"><code>model2 &lt;- lm(mpg ~ disp, mtcars)
+stargazer::stargazer(model, model2, type = &quot;html&quot;)</code></pre>
+<!-- rnb-source-end -->
+number of rows of result is not a multiple of vector length (arg 2)
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+mpg
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+disp
+</td>
+<td>
+-0.030<sup>***</sup>
+</td>
+<td>
+-0.041<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.007)
+</td>
+<td>
+(0.005)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+hp
+</td>
+<td>
+-0.025<sup>*</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.013)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+30.736<sup>***</sup>
+</td>
+<td>
+29.600<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.332)
+</td>
+<td>
+(1.230)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+32
+</td>
+<td>
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.748
+</td>
+<td>
+0.718
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.731
+</td>
+<td>
+0.709
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+3.127 (df = 29)
+</td>
+<td>
+3.251 (df = 30)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+43.095<sup>***</sup> (df = 2; 29)
+</td>
+<td>
+76.513<sup>***</sup> (df = 1; 30)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="fancier-way-to-report-models-with-stargazer-1" class="section level2">
 <h2>Fancier way to report models with <code>stargazer</code></h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcmdhemVyOjpzdGFyZ2F6ZXIobW9kZWwsIG1vZGVsMixcbiAgICAgICAgICAgICAgICAgICAgIHNpbmdsZS5yb3cgPSBULFxuICAgICAgICAgICAgICAgICAgICAgdHlwZSA9IFwiaHRtbFwiLFxuICAgICAgICAgICAgICAgICAgICAgb21pdC5zdGF0ID0gXCJyc3FcIilcbmBgYCJ9 -->
+<pre class="r"><code>stargazer::stargazer(model, model2,
+                     single.row = T,
+                     type = &quot;html&quot;,
+                     omit.stat = &quot;rsq&quot;)</code></pre>
+<!-- rnb-source-end -->
+number of rows of result is not a multiple of vector length (arg 2)
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+mpg
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+disp
+</td>
+<td>
+-0.030<sup>***</sup> (0.007)
+</td>
+<td>
+-0.041<sup>***</sup> (0.005)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+hp
+</td>
+<td>
+-0.025<sup>*</sup> (0.013)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+30.736<sup>***</sup> (1.332)
+</td>
+<td>
+29.600<sup>***</sup> (1.230)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+32
+</td>
+<td>
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.731
+</td>
+<td>
+0.709
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+3.127 (df = 29)
+</td>
+<td>
+3.251 (df = 30)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+43.095<sup>***</sup> (df = 2; 29)
+</td>
+<td>
+76.513<sup>***</sup> (df = 1; 30)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Modify stargazer with title, singe.row, covariate.labels, omit.stat</p>
 <ul>
 <li>Awesome <a href="http://www.jakeruss.com/cheatsheets/stargazer/">examples by Jake Russ</a></li>
@@ -232,15 +609,128 @@ $(document).ready(function () {
 </div>
 <div id="figures-with-code" class="section level2">
 <h2>Figures with code</h2>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChtdGNhcnMkZGlzcCwgbXRjYXJzJG1wZyx4bGFiID0gXCJkaXNwXCIsIHlsYWIgPSBcIm1wZ1wiKVxuYGBgIn0= -->
+<pre class="r"><code>plot(mtcars$disp, mtcars$mpg,xlab = &quot;disp&quot;, ylab = &quot;mpg&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0IjozMzcuNDUzNiwic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjU0Nn0= -->
+<p><img src="data:image/png;base64,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" /></p>
+<!-- rnb-plot-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Plot disp vs mpg</p>
 </div>
 <div id="tables" class="section level2">
 <h2>Tables</h2>
 <p>Create raw markdown table</p>
+<table>
+<thead>
+<tr class="header">
+<th>Title 1</th>
+<th>Title 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Element 1</td>
+<td>Element 2</td>
+</tr>
+<tr class="even">
+<td>Element 1</td>
+<td>Element 2</td>
+</tr>
+<tr class="odd">
+<td>Element 1</td>
+<td>Element 2</td>
+</tr>
+<tr class="even">
+<td>Element 1</td>
+<td>Element 2</td>
+</tr>
+<tr class="odd">
+<td>Element 1</td>
+<td>Element 2</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="tables-with-knitr-and-kable" class="section level2">
 <h2>Tables with <code>knitr</code> and <code>kable</code></h2>
 <p>Table from Data/taxa_table.csv and knitr</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+
+<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
+
+<table>
+<thead>
+<tr class="header">
+<th align="left">Family</th>
+<th align="left">Genus</th>
+<th align="left">Species</th>
+<th align="right">Count</th>
+<th align="right">Surfers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Pomacentridae</td>
+<td align="left">Hypsypops</td>
+<td align="left">rubicundus</td>
+<td align="right">1</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">Polyprionidae</td>
+<td align="left">Stereolepis</td>
+<td align="left">gigas</td>
+<td align="right">2</td>
+<td align="right">18</td>
+</tr>
+<tr class="odd">
+<td align="left">Scorpaenidae</td>
+<td align="left">Sebastes</td>
+<td align="left">hopkinsi</td>
+<td align="right">30</td>
+<td align="right">10</td>
+</tr>
+<tr class="even">
+<td align="left">Scorpaenidae</td>
+<td align="left">Sebastes</td>
+<td align="left">paucispinis</td>
+<td align="right">45</td>
+<td align="right">1</td>
+</tr>
+<tr class="odd">
+<td align="left">Scorpaenidae</td>
+<td align="left">Pterois</td>
+<td align="left">volitans</td>
+<td align="right">62</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="left">Serranidae</td>
+<td align="left">Paralabrax</td>
+<td align="left">clathratus</td>
+<td align="right">12</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">Serranidae</td>
+<td align="left">Paralabrax</td>
+<td align="left">nebulifer</td>
+<td align="right">15</td>
+<td align="right">12</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- rnb-html-end -->
+
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>Using the <code>taxa_table.csv</code> file in the <code>CourseMaterials</code></p>
 </div>
 <div id="californias-state-fish" class="section level2">
@@ -256,6 +746,159 @@ $(document).ready(function () {
 <div id="fancier-tables-with-kableextra" class="section level2">
 <h2>Fancier tables with <code>kableExtra</code></h2>
 <p>But scientific names (<em>Genus species</em>) are supposed to be in italics!</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+
+<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Family
+</th>
+<th style="text-align:left;">
+Genus
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Surfers
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Pomacentridae
+</td>
+<td style="text-align:left;font-style: italic;">
+Hypsypops
+</td>
+<td style="text-align:left;font-style: italic;">
+rubicundus
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Polyprionidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Stereolepis
+</td>
+<td style="text-align:left;font-style: italic;">
+gigas
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpaenidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Sebastes
+</td>
+<td style="text-align:left;font-style: italic;">
+hopkinsi
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpaenidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Sebastes
+</td>
+<td style="text-align:left;font-style: italic;">
+paucispinis
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Scorpaenidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Pterois
+</td>
+<td style="text-align:left;font-style: italic;">
+volitans
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Serranidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Paralabrax
+</td>
+<td style="text-align:left;font-style: italic;">
+clathratus
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Serranidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Paralabrax
+</td>
+<td style="text-align:left;font-style: italic;">
+nebulifer
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- rnb-html-end -->
+
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <ul>
 <li>Specify format by columns</li>
 </ul>
@@ -265,6 +908,157 @@ $(document).ready(function () {
 <ul>
 <li>Collapse rows for clarity</li>
 </ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+
+<!-- rnb-html-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImtuaXRfYXNpcyJdLCJzaXppbmdQb2xpY3kiOltdfX0= -->
+
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+Family
+</th>
+<th style="text-align:left;">
+Genus
+</th>
+<th style="text-align:left;">
+Species
+</th>
+<th style="text-align:right;">
+Count
+</th>
+<th style="text-align:right;">
+Surfers
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Pomacentridae
+</td>
+<td style="text-align:left;font-style: italic;">
+Hypsypops
+</td>
+<td style="text-align:left;font-style: italic;">
+rubicundus
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+20
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Polyprionidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Stereolepis
+</td>
+<td style="text-align:left;font-style: italic;">
+gigas
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+18
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: middle !important;" rowspan="3">
+Scorpaenidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Sebastes
+</td>
+<td style="text-align:left;font-style: italic;">
+hopkinsi
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-style: italic;">
+Sebastes
+</td>
+<td style="text-align:left;font-style: italic;">
+paucispinis
+</td>
+<td style="text-align:right;">
+45
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-style: italic;">
+Pterois
+</td>
+<td style="text-align:left;font-style: italic;">
+volitans
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;vertical-align: middle !important;" rowspan="2">
+Serranidae
+</td>
+<td style="text-align:left;font-style: italic;">
+Paralabrax
+</td>
+<td style="text-align:left;font-style: italic;">
+clathratus
+</td>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;font-style: italic;">
+Paralabrax
+</td>
+<td style="text-align:left;font-style: italic;">
+nebulifer
+</td>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+</tbody>
+</table>
+
+
+<!-- rnb-html-end -->
+
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChzZGpma2pzKVxuYGBgIn0= -->
+<pre class="r"><code>plot(sdjfkjs)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 </div>
 <div id="if-there-is-time" class="section level2">
 <h2>If there is time</h2>
@@ -320,7 +1114,7 @@ $(document).ready(function () {
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlc3RpbmcgUiBNYXJrZG93biINCmF1dGhvcjogIlZpbGxhc2XDsW9yLURlcmJleiwgSi5DLiINCmRhdGU6ICIzMSBkZSBvY3R1YnJlIGRlIDIwMTciDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQojIEhhbmRzLW9uDQoNCiMjIEV4cGxhaW4gdGhlIGVudmlyb25tZW50DQoNCiMjIFJlZmVyZW5jZXMNCg0KWW91IG5lZWQ6DQoNCi0gQSBCaWJUZVggZmlsZSAocHJvdmlkZWQgaW4gdGhlIENvdXJzZU1hdGVyaWFscyBmb2xkZXIpDQotIFNwZWNpZnkgYGJpYmxpb2dyYXBoeTpgIGFuZCBgY3NsOmAgaW4gdGhlIGhlYWRlcg0KLSBUaGF0J3MgaXQuLi4NCg0KKipSZWZlcmVuY2VzKioNCg0KIyMjIE90aGVyIHJlc291cmNlcyBmb3IgcmVmZXJlbmNlcw0KDQotIFtDaXRhdGlvbiBzdHlsZSBsaWJyYXJ5XShodHRwOi8vZWRpdG9yLmNpdGF0aW9uc3R5bGVzLm9yZy9hYm91dC8pDQoNCi0gVHlsZXIgQ2xhdmVsbGUgaGFzIGEgZ3JlYXQgW3R1dG9yaWFsXShodHRwczovL3RjbGF2ZWxsZS5naXRodWIuaW8vYmxvZy9yZWZlcmVuY2VfdGlwcy8pIG9uIHRoaXMNCg0KIyMgTG9hZCBwYWNrYWdlcw0KDQojIyBDb2RlIGNodW5rIG9wdGlvbnMNCg0KLSBDSFVOSyBOQU1FUyENCi0gYGVjaG9gIGhpZGVzIGNvZGUgZnJvbSBvdXRwdXQNCi0gYGV2YWxgIGV2YWx1YXRlIGNodW5rPw0KLSBgZmlnLndpZHRoYA0KLSBgZmlnLmhlaWdodGANCi0gYGZpZy5jYXBgIFRvIGFkZCBmaWd1cmUgY2FwdGlvbg0KDQojIyBgZWNobyA9IFRSVUVgDQoNCkZpdCBhIGxpbmVhciBtb2RlbCAobXBnIH4gZGlzcCkgYW5kIGluc3BlY3Qgd2l0aCBzdW1tYXJ5DQoNCiMjIGBlY2hvID0gRkFMU0VgDQoNClNhbWUgYXMgYWJvdmUNCg0KIyMgRmFuY2llciB3YXkgdG8gcmVwb3J0IG1vZGVscyB3aXRoIGBzdGFyZ2F6ZXJgDQoNCnJlc3VsdHMgPSAnYXNpcycNCg0KDQojIyBGYW5jaWVyIHdheSB0byByZXBvcnQgbW9kZWxzIHdpdGggYHN0YXJnYXplcmANCg0KTW9kaWZ5IHN0YXJnYXplciB3aXRoIHRpdGxlLCBzaW5nZS5yb3csIGNvdmFyaWF0ZS5sYWJlbHMsIG9taXQuc3RhdA0KDQotIEF3ZXNvbWUgW2V4YW1wbGVzIGJ5IEpha2UgUnVzc10oaHR0cDovL3d3dy5qYWtlcnVzcy5jb20vY2hlYXRzaGVldHMvc3RhcmdhemVyLykNCg0KIyMgRmlndXJlcyB3aXRoIGNvZGUNCg0KUGxvdCBkaXNwIHZzIG1wZw0KDQojIyBUYWJsZXMNCg0KQ3JlYXRlIHJhdyBtYXJrZG93biB0YWJsZQ0KDQoNCiMjIFRhYmxlcyB3aXRoIGBrbml0cmAgYW5kIGBrYWJsZWANCg0KVGFibGUgZnJvbSBEYXRhL3RheGFfdGFibGUuY3N2IGFuZCBrbml0cg0KDQpVc2luZyB0aGUgYHRheGFfdGFibGUuY3N2YCBmaWxlIGluIHRoZSBgQ291cnNlTWF0ZXJpYWxzYA0KDQojIyBDYWxpZm9ybmlhJ3MgU3RhdGUgRmlzaA0KDQohW0p1dmVuaWxlIEdhcmliYWxkaSAoKkh5cHN5cG9wcyBydWJpY3VuZHVzKildKGh0dHA6Ly93d3cuZmlzaGJhc2Uub3JnL2ltYWdlcy9zcGVjaWVzL0h5cnViX2owLmpwZykNCg0KLSBPY3RvYmVyIDE1LCAxOTk1LCBBZG9wdGVkIGFzIHRoZSBDYWxpZm9ybmlhIFN0YXRlIE1hcmluZSBGaXNoDQoNCiMjIEZhbmNpZXIgdGFibGVzIHdpdGggYGthYmxlRXh0cmFgDQoNCkJ1dCBzY2llbnRpZmljIG5hbWVzICgqR2VudXMgc3BlY2llcyopIGFyZSBzdXBwb3NlZCB0byBiZSBpbiBpdGFsaWNzIQ0KDQotIFNwZWNpZnkgZm9ybWF0IGJ5IGNvbHVtbnMNCg0KIyMgRmFuY2llciB0YWJsZXMgd2l0aCBga2FibGVFeHRyYWANCg0KLSBDb2xsYXBzZSByb3dzIGZvciBjbGFyaXR5DQoNCiMjIElmIHRoZXJlIGlzIHRpbWUNCg0KRG8gb25lIG9mIHRoZSBmb2xsb3dpbmcgYXNzaWdubWVudHMuIFNob3VsZCBiZSBsZXNzIHRoYW4gNSBtaW51dGVzDQoNCi0gQ3JlYXRlIGFuIGh0bWwgZG9jdW1lbnQ6DQogICAgLSBUaXRsZQ0KICAgIC0gU3VidGl0bGUNCiAgICAtIEF1dGhvcg0KICAgIC0gSGVhZGVycyBhbmQgc3ViaGVhZGVyDQogICAgLSBBIGxpc3Qgd2l0aCBidWxsZXRzDQogICAgLSBUZXh0IHdpdGggb2xkIGFuZCBpdGFsbGljcw0KICAgIC0gMSBwbG90IChub3RoaW5nIG1lYW5pbmdmdWwsIGludmVudCBzb21ldGhpbmcgb3IgdXNlIGV4aXN0aW5nIGRhdGEpDQogICAgLSAxIGBrbml0cmAgKyBga2FibGVFeHRyYWAgdGFibGUNCi0gRXh0cmE6DQogICAgLSBJbmNsdWRlIGFuIGVxdWF0aW9uDQogICAgLSBDb2RlIGRvZXNuJ3Qgc2hvdw0KICAgIC0gSW5jbHVkZSBhdCBsZWFzdCAxIHJlZmVyZW5jZSBmcm9tIHRoZSBCaWJUZXggZmlsZQ0KDQojIyBSZXNvdXJjZXMNCg0KLSBJbnRybyB0byBSIE1hcmtkb3duOg0KICAgIC0gW1R1dG9yaWFsXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tL2xlc3Nvbi0xLmh0bWwpDQotIFlBTUwgb3B0aW9uczoNCiAgICAtIFNlZSBbb3B0aW9ucyBmb3IgSFRNTF0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbS9odG1sX2RvY3VtZW50X2Zvcm1hdC5odG1sKQ0KICAgIC0gU2VlIFtvcHRpb25zIGZvciBQREZdKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20vcGRmX2RvY3VtZW50X2Zvcm1hdC5odG1sKQ0KLSBSZWZlcmVuY2VzDQogICAgLSBbQ2l0YXRpb24gc3R5bGUgbGlicmFyeV0oaHR0cDovL2VkaXRvci5jaXRhdGlvbnN0eWxlcy5vcmcvYWJvdXQvKQ0KICAgIC0gVHlsZXIgQ2xhdmVsbGUncyBbdHV0b3JpYWxdKGh0dHBzOi8vdGNsYXZlbGxlLmdpdGh1Yi5pby9ibG9nL3JlZmVyZW5jZV90aXBzLykNCi0gU3RhcmdhemVyDQogICAgLSBKYWtlIFJ1c3MnIFtjaGVhdHNoZWV0XShodHRwOi8vd3d3Lmpha2VydXNzLmNvbS9jaGVhdHNoZWV0cy9zdGFyZ2F6ZXIvKQ0KLSBrYWJsZUV4dHJhDQogICAgLSBbRm9yIEhUTUwgb3V0cHV0XShodHRwOi8vaGFvemh1MjMzLmdpdGh1Yi5pby9rYWJsZUV4dHJhL2F3ZXNvbWVfdGFibGVfaW5faHRtbC5odG1sKQ0KICAgIC0gW0ZvciBQREYgb3V0cHV0XShodHRwOi8vaGFvemh1MjMzLmdpdGh1Yi5pby9rYWJsZUV4dHJhL2F3ZXNvbWVfdGFibGVfaW5fcGRmLnBkZikNCg0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIlRlc3RpbmcgUiBNYXJrZG93biINCmF1dGhvcjogIlZpbGxhc2XDg8Kxb3ItRGVyYmV6LCBKLkMuIg0KZGF0ZTogIjMxIGRlIG9jdHVicmUgZGUgMjAxNyINCm91dHB1dDoNCiAgaHRtbF9ub3RlYm9vazogDQogICAgZmlnX2NhcHRpb246IHllcw0KY3NsOiBDaXRhdGlvbl9zdHlsZXMvcGxvcy1vbmUuY3NsDQpiaWJsaW9ncmFwaHk6IHJlZmVyZW5jZXMuYmliDQotLS0NCg0KIyBIYW5kcy1vbg0KDQojIyBFeHBsYWluIHRoZSBlbnZpcm9ubWVudA0KDQojIyBDb2RlIGFuZCBjb2RlIHNodW5rcw0KDQpJIGhhdmUgYHIgbWVhbihjKDIsMyw1LDcsMSwxMCkpYCBhcHBsZXMNCg0KYGBge3IsIGVjaG8gPSBGfQ0Kc3VwcHJlc3NQYWNrYWdlU3RhcnR1cE1lc3NhZ2VzKHsNCiAgbGlicmFyeShrbml0cikNCiAgbGlicmFyeShzdGFyZ2F6ZXIpDQogIGxpYnJhcnkoa2FibGVFeHRyYSkNCn0pDQpgYGANCg0KYGBge3IsIGVjaG8gPSBGfQ0KbW9kZWwgPC0gbG0obXBnIH4gZGlzcCArIGhwLCBtdGNhcnMpDQpzdW1tYXJ5KG1vZGVsKQ0KYGBgDQoNClRoZSBpbnRlcmNlcHQgaXMgYHIgY29lZihtb2RlbClbMV1gDQoNCiMjIFJlZmVyZW5jZXMNCg0KWW91IG5lZWQ6DQoNCi0gQSBCaWJUZVggZmlsZSAocHJvdmlkZWQgaW4gdGhlIENvdXJzZU1hdGVyaWFscyBmb2xkZXIpDQotIFNwZWNpZnkgYGJpYmxpb2dyYXBoeTpgIGFuZCBgY3NsOmAgaW4gdGhlIGhlYWRlcg0KLSBUaGF0J3MgaXQuLi4NCg0KIkEgdGlkeSBkYXRhc2V0IGhhcyBhIGNvbHVtbiBmb3IgZWFjaCB2YXJpYWJsZSIgW0B3aWNraGFtXzIwMTRdDQoNCioqUmVmZXJlbmNlcyoqDQoNCjxkaXYgaWQgPSAicmVmcyI+PC9kaXY+DQoNCiMjIyBPdGhlciByZXNvdXJjZXMgZm9yIHJlZmVyZW5jZXMNCg0KLSBbQ2l0YXRpb24gc3R5bGUgbGlicmFyeV0oaHR0cDovL2VkaXRvci5jaXRhdGlvbnN0eWxlcy5vcmcvYWJvdXQvKQ0KDQotIFR5bGVyIENsYXZlbGxlIGhhcyBhIGdyZWF0IFt0dXRvcmlhbF0oaHR0cHM6Ly90Y2xhdmVsbGUuZ2l0aHViLmlvL2Jsb2cvcmVmZXJlbmNlX3RpcHMvKSBvbiB0aGlzDQoNCiMjIENvZGUgY2h1bmsgb3B0aW9ucw0KDQotIENIVU5LIE5BTUVTIQ0KLSBgZWNob2AgaGlkZXMgY29kZSBmcm9tIG91dHB1dA0KLSBgZXZhbGAgZXZhbHVhdGUgY2h1bms/DQotIGBmaWcud2lkdGhgDQotIGBmaWcuaGVpZ2h0YA0KLSBgZmlnLmNhcGAgVG8gYWRkIGZpZ3VyZSBjYXB0aW9uDQoNCiMjIEZhbmNpZXIgd2F5IHRvIHJlcG9ydCBtb2RlbHMgd2l0aCBgc3RhcmdhemVyYA0KDQpyZXN1bHRzID0gJ2FzaXMnDQoNCmBgYHtyLCByZXN1bHRzID0gImFzaXMifQ0KDQptb2RlbDIgPC0gbG0obXBnIH4gZGlzcCwgbXRjYXJzKQ0Kc3RhcmdhemVyOjpzdGFyZ2F6ZXIobW9kZWwsIG1vZGVsMiwgdHlwZSA9ICJodG1sIikNCmBgYA0KDQoNCg0KIyMgRmFuY2llciB3YXkgdG8gcmVwb3J0IG1vZGVscyB3aXRoIGBzdGFyZ2F6ZXJgDQoNCmBgYHtyLCByZXN1bHRzID0gImFzaXMifQ0Kc3RhcmdhemVyOjpzdGFyZ2F6ZXIobW9kZWwsIG1vZGVsMiwNCiAgICAgICAgICAgICAgICAgICAgIHNpbmdsZS5yb3cgPSBULA0KICAgICAgICAgICAgICAgICAgICAgdHlwZSA9ICJodG1sIiwNCiAgICAgICAgICAgICAgICAgICAgIG9taXQuc3RhdCA9ICJyc3EiKQ0KYGBgDQoNCg0KTW9kaWZ5IHN0YXJnYXplciB3aXRoIHRpdGxlLCBzaW5nZS5yb3csIGNvdmFyaWF0ZS5sYWJlbHMsIG9taXQuc3RhdA0KDQotIEF3ZXNvbWUgW2V4YW1wbGVzIGJ5IEpha2UgUnVzc10oaHR0cDovL3d3dy5qYWtlcnVzcy5jb20vY2hlYXRzaGVldHMvc3RhcmdhemVyLykNCg0KIyMgRmlndXJlcyB3aXRoIGNvZGUNCg0KYGBge3IsIGZpZy5jYXA9IlRoaXMgaXMgbXkgY2FwdGlvbiJ9DQpwbG90KG10Y2FycyRkaXNwLCBtdGNhcnMkbXBnLHhsYWIgPSAiZGlzcCIsIHlsYWIgPSAibXBnIikNCmBgYA0KDQoNClBsb3QgZGlzcCB2cyBtcGcNCg0KIyMgVGFibGVzDQoNCkNyZWF0ZSByYXcgbWFya2Rvd24gdGFibGUNCg0KVGl0bGUgMSB8IFRpdGxlIDINCi0tLS0tLS0tfC0tLS0tLS0tDQpFbGVtZW50IDEgfCBFbGVtZW50IDINCkVsZW1lbnQgMSB8IEVsZW1lbnQgMg0KRWxlbWVudCAxIHwgRWxlbWVudCAyDQpFbGVtZW50IDEgfCBFbGVtZW50IDINCkVsZW1lbnQgMSB8IEVsZW1lbnQgMg0KDQoNCiMjIFRhYmxlcyB3aXRoIGBrbml0cmAgYW5kIGBrYWJsZWANCg0KVGFibGUgZnJvbSBEYXRhL3RheGFfdGFibGUuY3N2IGFuZCBrbml0cg0KDQpgYGB7cn0NCnRheGFfdGFibGUgPC0gcmVhZC5jc3YoIkRhdGEvdGF4YV90YWJsZS5jc3YiKQ0Ka25pdHI6OmthYmxlKHRheGFfdGFibGUpDQpgYGANCg0KDQpVc2luZyB0aGUgYHRheGFfdGFibGUuY3N2YCBmaWxlIGluIHRoZSBgQ291cnNlTWF0ZXJpYWxzYA0KDQojIyBDYWxpZm9ybmlhJ3MgU3RhdGUgRmlzaA0KDQohW0p1dmVuaWxlIEdhcmliYWxkaSAoKkh5cHN5cG9wcyBydWJpY3VuZHVzKildKGh0dHA6Ly93d3cuZmlzaGJhc2Uub3JnL2ltYWdlcy9zcGVjaWVzL0h5cnViX2owLmpwZykNCg0KLSBPY3RvYmVyIDE1LCAxOTk1LCBBZG9wdGVkIGFzIHRoZSBDYWxpZm9ybmlhIFN0YXRlIE1hcmluZSBGaXNoDQoNCiMjIEZhbmNpZXIgdGFibGVzIHdpdGggYGthYmxlRXh0cmFgDQoNCkJ1dCBzY2llbnRpZmljIG5hbWVzICgqR2VudXMgc3BlY2llcyopIGFyZSBzdXBwb3NlZCB0byBiZSBpbiBpdGFsaWNzIQ0KDQpgYGB7cn0NCmtuaXRyOjprYWJsZSh0YXhhX3RhYmxlLCBmb3JtYXQgPSAiaHRtbCIpICU+JQ0KICBrYWJsZUV4dHJhOjprYWJsZV9zdHlsaW5nKCkgJT4lDQogIGthYmxlRXh0cmE6OmNvbHVtbl9zcGVjKGNvbHVtbiA9IDIsIGl0YWxpYyA9IFQpICU+JQ0KICBrYWJsZUV4dHJhOjpjb2x1bW5fc3BlYyhjb2x1bW4gPSAzLCBpdGFsaWMgPSBUKQ0KYGBgDQoNCg0KLSBTcGVjaWZ5IGZvcm1hdCBieSBjb2x1bW5zDQoNCiMjIEZhbmNpZXIgdGFibGVzIHdpdGggYGthYmxlRXh0cmFgDQoNCi0gQ29sbGFwc2Ugcm93cyBmb3IgY2xhcml0eQ0KDQpgYGB7cn0NCmtuaXRyOjprYWJsZSh0YXhhX3RhYmxlLCBmb3JtYXQgPSAiaHRtbCIpICU+JQ0KICBrYWJsZUV4dHJhOjprYWJsZV9zdHlsaW5nKCkgJT4lDQogIGthYmxlRXh0cmE6OmNvbHVtbl9zcGVjKGNvbHVtbiA9IDIsIGl0YWxpYyA9IFQpICU+JQ0KICBrYWJsZUV4dHJhOjpjb2x1bW5fc3BlYyhjb2x1bW4gPSAzLCBpdGFsaWMgPSBUKSAlPiUNCiAga2FibGVFeHRyYTo6Y29sbGFwc2Vfcm93cyhjb2x1bW5zID0gMSkNCmBgYA0KDQpgYGB7cn0NCnBsb3Qoc2RqZmtqcykNCmBgYA0KDQoNCiMjIElmIHRoZXJlIGlzIHRpbWUNCg0KRG8gb25lIG9mIHRoZSBmb2xsb3dpbmcgYXNzaWdubWVudHMuIFNob3VsZCBiZSBsZXNzIHRoYW4gNSBtaW51dGVzDQoNCi0gQ3JlYXRlIGFuIGh0bWwgZG9jdW1lbnQ6DQogICAgLSBUaXRsZQ0KICAgIC0gU3VidGl0bGUNCiAgICAtIEF1dGhvcg0KICAgIC0gSGVhZGVycyBhbmQgc3ViaGVhZGVyDQogICAgLSBBIGxpc3Qgd2l0aCBidWxsZXRzDQogICAgLSBUZXh0IHdpdGggb2xkIGFuZCBpdGFsbGljcw0KICAgIC0gMSBwbG90IChub3RoaW5nIG1lYW5pbmdmdWwsIGludmVudCBzb21ldGhpbmcgb3IgdXNlIGV4aXN0aW5nIGRhdGEpDQogICAgLSAxIGBrbml0cmAgKyBga2FibGVFeHRyYWAgdGFibGUNCi0gRXh0cmE6DQogICAgLSBJbmNsdWRlIGFuIGVxdWF0aW9uDQogICAgLSBDb2RlIGRvZXNuJ3Qgc2hvdw0KICAgIC0gSW5jbHVkZSBhdCBsZWFzdCAxIHJlZmVyZW5jZSBmcm9tIHRoZSBCaWJUZXggZmlsZQ0KDQojIyBSZXNvdXJjZXMNCg0KLSBJbnRybyB0byBSIE1hcmtkb3duOg0KICAgIC0gW1R1dG9yaWFsXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tL2xlc3Nvbi0xLmh0bWwpDQotIFlBTUwgb3B0aW9uczoNCiAgICAtIFNlZSBbb3B0aW9ucyBmb3IgSFRNTF0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbS9odG1sX2RvY3VtZW50X2Zvcm1hdC5odG1sKQ0KICAgIC0gU2VlIFtvcHRpb25zIGZvciBQREZdKGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20vcGRmX2RvY3VtZW50X2Zvcm1hdC5odG1sKQ0KLSBSZWZlcmVuY2VzDQogICAgLSBbQ2l0YXRpb24gc3R5bGUgbGlicmFyeV0oaHR0cDovL2VkaXRvci5jaXRhdGlvbnN0eWxlcy5vcmcvYWJvdXQvKQ0KICAgIC0gVHlsZXIgQ2xhdmVsbGUncyBbdHV0b3JpYWxdKGh0dHBzOi8vdGNsYXZlbGxlLmdpdGh1Yi5pby9ibG9nL3JlZmVyZW5jZV90aXBzLykNCi0gU3RhcmdhemVyDQogICAgLSBKYWtlIFJ1c3MnIFtjaGVhdHNoZWV0XShodHRwOi8vd3d3Lmpha2VydXNzLmNvbS9jaGVhdHNoZWV0cy9zdGFyZ2F6ZXIvKQ0KLSBrYWJsZUV4dHJhDQogICAgLSBbRm9yIEhUTUwgb3V0cHV0XShodHRwOi8vaGFvemh1MjMzLmdpdGh1Yi5pby9rYWJsZUV4dHJhL2F3ZXNvbWVfdGFibGVfaW5faHRtbC5odG1sKQ0KICAgIC0gW0ZvciBQREYgb3V0cHV0XShodHRwOi8vaGFvemh1MjMzLmdpdGh1Yi5pby9rYWJsZUV4dHJhL2F3ZXNvbWVfdGFibGVfaW5fcGRmLnBkZikNCg0KDQo=</div>
 
 
 

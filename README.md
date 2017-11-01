@@ -2,6 +2,9 @@
 
 An introductory [eco-data science](https://eco-data-science.github.io/) course for R markdown
 
+- [Slides](./CourseMaterials/intro2Rmd.html)
+- [Materials](./CourseMaterials/intro2Rmd.nb.html)
+
 ## Getting started
 
 Before we get to play with R markdown, we need to make sure you have the latest versions of R and R Studio. Then, I'll give a list of basic R packages that we will use, and then some instructions on how to download the materials in this repository (the stuff you see above).

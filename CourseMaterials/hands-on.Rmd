@@ -1,0 +1,122 @@
+---
+title: "Testing R Markdown"
+author: "Villaseñor-Derbez, J.C."
+date: "31 de octubre de 2017"
+output: html_notebook
+---
+
+# Hands-on
+
+## Explain the environment
+
+## References
+
+You need:
+
+- A BibTeX file (provided in the CourseMaterials folder)
+- Specify `bibliography:` and `csl:` in the header
+- That's it...
+
+"A tidy dataset has one column per variable" [@wickham_2014]
+
+**References**
+
+<div id="refs"></div>
+
+### Other resources for references
+
+- [Citation style library](http://editor.citationstyles.org/about/)
+
+- Tyler Clavelle has a great [tutorial](https://tclavelle.github.io/blog/reference_tips/) on this
+
+## Code chunks and in-line code
+
+- There were `r nrow(mtcars)` cars studied
+
+- Used to isolate plain text from code
+- Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
+- Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
+- Always name your chunks!
+
+## Load packages
+
+## Code chunk options
+
+- CHUNK NAMES!
+- `echo` hides code from output
+- `eval` evaluate chunk?
+- `fig.width`
+- `fig.height`
+- `fig.cap` To add figure caption
+
+## `echo = TRUE`
+
+Fit a linear model (mpg ~ disp) and inspect with summary
+
+## `echo = FALSE`
+
+Same as above
+
+## Fancier way to report models with `stargazer`
+
+results = 'asis'
+
+
+## Fancier way to report models with `stargazer`
+
+Modify stargazer with title, singe.row, covariate.labels, omit.stat
+
+- Awesome [examples by Jake Russ](http://www.jakeruss.com/cheatsheets/stargazer/)
+
+## Figures with code
+
+Plot disp vs mpg
+
+## Tables
+
+Create raw markdown table
+
+
+## Tables with `knitr` and `kable`
+
+Table from Data/taxa_table.csv and knitr
+
+Using the `taxa_table.csv` file in the `CourseMaterials`
+
+## California's State Fish
+
+![Juvenile Garibaldi (*Hypsypops rubicundus*)](http://www.fishbase.org/images/species/Hyrub_j0.jpg)
+
+- October 15, 1995, Adopted as the California State Marine Fish
+
+## Fancier tables with `kableExtra`
+
+But scientific names (*Genus species*) are supposed to be in italics!
+
+- Specify format by columns
+
+## Fancier tables with `kableExtra`
+
+- Collapse rows for clarity
+
+## If there is time
+
+Do one of the following assignments. Should be less than 5 minutes
+
+- Create an html document:
+    - Title
+    - Subtitle
+    - Author
+    - Include at least 1 reference from the BibTex file
+    - A list with bullets
+    - Bold and itallics
+    - 1 plot (nothing meaningful, invent something or use existing data)
+    - 1 `knitr` + `kableExtra` table
+    - Code doesn't show
+
+- Create a presentation:
+    - Title slide
+    - Slide with picture (no code)
+    - Slide with some R code and output
+
+

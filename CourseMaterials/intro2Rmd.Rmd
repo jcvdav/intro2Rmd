@@ -6,6 +6,7 @@ output:
   ioslides_presentation:
     fig_caption: yes
     transition: faster
+    widescreen: yes
   html_notebook:
     toc: true
     toc_float:
@@ -33,7 +34,7 @@ csl: Citation_styles/ieee.csl
     - a lightweight markup language
     - easy-to-read, easy-to-write plain text that gets converted into HTML
 - R Markdown is:
-    -  The above + R code embeded to create graphs, tables, values... any type of R output
+    -  The above + R code embedded to create graphs, tables, values... any type of R output
 - `knitr`, which is an R package, transforms \*.Rmd into \*.md, which is then processed by `pandoc`
 
 ![](Img/RMarkdownFlow.png)
@@ -49,6 +50,8 @@ Yihui Xie
 ## Why?
 
 - It is great for research
+    - Keeps everything together (analysis, references, text, data...)
+    - Easier to iterate over your work (*i.e.* easier to incorporate suggestions by Reviewer #2)
 - It fosters reproducibility
 
 # Getting started (just text)
@@ -56,15 +59,21 @@ Yihui Xie
 ## New Rmd document and types of output
 
 - Slides
+    - ioslides
+    - slidy presentations
+    - beamer\*
 - **HTML**
+    - HTML notebook
 - PDF
 - Word
-- Shiny
+- Shiny (interactive documents)
+    - Document
+    - Presentation
 
 ## YAML
 
 - Set of `key:` and `value` pairs
-- Contains information passed to `knitr` and `pandoc`
+- Contains variables/parameters passed to `knitr` and `pandoc` to control output
 - The default one looks like this:
 
 ```
@@ -82,7 +91,7 @@ output: ioslides_presentation
 - `fig_caption: yes` adds figure captions from chunks
 - `toc: yes` adds a table of contents
 - `subtitle:"Fancy subtitle"` adds a subtitle
-- `bibliography: references.bib` specifies where to look for bibTex entries
+- `bibliography: references.bib` specifies where to look for BibTeX entries
 - `csl: plos.csl` specifies citation format (in this case, PLoS ONE's)
 
 See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) and [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html) output
@@ -95,7 +104,7 @@ See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) a
 - `m s^-2^` is then m s^-2^
 - You can write LaTeX equations by wrapping an expression in `$`: 
     - `$E = mC^2$` is $E = mC^2$
-- Write greek letters with `$\letter$`:
+- Write Greek letters with `$\letter$`:
     - `$\beta$` gives you $\beta$
 - Same for fancier equations:
     - `$$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$$` is just: $$\hat{Y} = \sum_{i = 1}^N\frac{\beta_a^4}{\phi \times \Omega} + \beta_b$$
@@ -103,6 +112,8 @@ See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html) a
 ## Basic syntax: bullets
 
 - Bullets can be specified by -, +, or *
+
+This:
 
 ```
 * Item 1
@@ -120,6 +131,8 @@ Gives:
 
 ## Basic synax: numbered bullets
 
+This
+
 ```
 1. Item 1
 2. Item 2
@@ -127,6 +140,7 @@ Gives:
     + Item 3a
     + Item 3b
 ```
+Gives:
 
 1. Item 1
 2. Item 2
@@ -134,14 +148,14 @@ Gives:
     + Item 3a
     + Item 3b
 
-## Images and links
+## Links and Images
 
 - Specify a link: `[go to google](www.google.com)`
 - and see [go to google](www.google.com)
 
 - You can insert images saved on your computer, or from the web:
-    - image: `![Figure caption](Img/RStudio-Ball.png)`
-    - ![Figure caption](Img/RStudio-Ball.png)
+    - image: `![](Img/RStudio-Ball.png)`
+    - ![](Img/RStudio-Ball.png)
 
 # Hands-on
 
@@ -149,7 +163,7 @@ Gives:
 
 You need:
 
-- A bibTex file (provided in the CourseMaterials folder)
+- A BibTeX file (provided in the CourseMaterials folder)
 - Specify `bibliography:` and `csl:` in the header
 - That's it...
 
@@ -193,6 +207,7 @@ suppressPackageStartupMessages({
 - Always name your chunks!
 
 ## Code chunk options
+
 - `echo` hides code from output
 - `eval` evaluate chunk?
 - `fig.width`
@@ -280,7 +295,7 @@ knitr::kable(taxa_table) # Create a table of the data
 
 ## Fancier tables with `kableExtra` {.smaller}
 
-But scientific names (*Genus species*) are supposed to be in itallics!
+But scientific names (*Genus species*) are supposed to be in italics!
 
 - Specify format by columns
 
@@ -317,7 +332,7 @@ knitr::kable(taxa_table, format = "html") %>%
 ## Show and tell
 
 - `<div id="refs"></div>` to specify placement of references (*i.e.* when you are writing a manuscript)
-- To add line numbers and doblespacing to your manuscript, add to the YAML:
+- To add line numbers and double-spacing to your manuscript, add to the YAML:
 
 ```
 header-includes:

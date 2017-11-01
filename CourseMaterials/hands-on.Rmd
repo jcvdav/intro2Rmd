@@ -17,26 +17,13 @@ You need:
 - Specify `bibliography:` and `csl:` in the header
 - That's it...
 
-"A tidy dataset has one column per variable" [@wickham_2014]
-
 **References**
-
-<div id="refs"></div>
 
 ### Other resources for references
 
 - [Citation style library](http://editor.citationstyles.org/about/)
 
 - Tyler Clavelle has a great [tutorial](https://tclavelle.github.io/blog/reference_tips/) on this
-
-## Code chunks and in-line code
-
-- There were `r nrow(mtcars)` cars studied
-
-- Used to isolate plain text from code
-- Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
-- Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
-- Always name your chunks!
 
 ## Load packages
 
@@ -107,16 +94,30 @@ Do one of the following assignments. Should be less than 5 minutes
     - Title
     - Subtitle
     - Author
-    - Include at least 1 reference from the BibTex file
+    - Headers and subheader
     - A list with bullets
-    - Bold and itallics
+    - Text with old and itallics
     - 1 plot (nothing meaningful, invent something or use existing data)
     - 1 `knitr` + `kableExtra` table
+- Extra:
+    - Include an equation
     - Code doesn't show
+    - Include at least 1 reference from the BibTex file
 
-- Create a presentation:
-    - Title slide
-    - Slide with picture (no code)
-    - Slide with some R code and output
+## Resources
+
+- Intro to R Markdown:
+    - [Tutorial](http://rmarkdown.rstudio.com/lesson-1.html)
+- YAML options:
+    - See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html)
+    - See [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html)
+- References
+    - [Citation style library](http://editor.citationstyles.org/about/)
+    - Tyler Clavelle's [tutorial](https://tclavelle.github.io/blog/reference_tips/)
+- Stargazer
+    - Jake Russ' [cheatsheet](http://www.jakeruss.com/cheatsheets/stargazer/)
+- kableExtra
+    - [For HTML output](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
+    - [For PDF output](http://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
 
 

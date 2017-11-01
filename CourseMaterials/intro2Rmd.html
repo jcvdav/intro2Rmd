@@ -300,6 +300,17 @@ output: ioslides_presentation
 
 </article></slide><slide class='segue dark nobackground level1'><hgroup class = 'auto-fadein'><h2>Hands-on</h2></hgroup><article  id="hands-on">
 
+</article></slide><slide class=''><hgroup><h2>Code chunks and in-line code</h2></hgroup><article  id="code-chunks-and-in-line-code">
+
+<ul>
+<li><code>There were &quot;r nrow(mtcars)&quot; cars studied</code></li>
+<li><p>There were 32 cars studied</p></li>
+<li>Used to isolate plain text from code</li>
+<li>Allow you to execute R, Python, Rcpp, SQL, and Stan within your file</li>
+<li>Use <code>Ctrl</code> + <code>Alt</code> + <code>I</code> (Windows) <code>Cmd</code> + <code>Alt</code> + <code>I</code> (Mac) to insert</li>
+<li><p>Always name your chunks!</p></li>
+</ul>
+
 </article></slide><slide class=''><hgroup><h2>References</h2></hgroup><article  id="references">
 
 <p>You need:</p>
@@ -337,17 +348,6 @@ csl: Citation_styles/ieee.csl
   library(knitr)
   library(kableExtra)
 })</pre>
-
-</article></slide><slide class=''><hgroup><h2>Code chunks and in-line code</h2></hgroup><article  id="code-chunks-and-in-line-code">
-
-<ul>
-<li><code>There were &quot;r nrow(mtcars)&quot; cars studied</code></li>
-<li><p>There were 32 cars studied</p></li>
-<li>Used to isolate plain text from code</li>
-<li>Allow you to execute R, Python, Rcpp, SQL, and Stan within your file</li>
-<li>Use <code>Ctrl</code> + <code>Alt</code> + <code>I</code> (Windows) <code>Cmd</code> + <code>Alt</code> + <code>I</code> (Mac) to insert</li>
-<li><p>Always name your chunks!</p></li>
-</ul>
 
 </article></slide><slide class=''><hgroup><h2>Code chunk options</h2></hgroup><article  id="code-chunk-options">
 
@@ -1560,9 +1560,66 @@ nebulifer
 
 </table>
 
-</article></slide><slide class=''><hgroup><h2>Short example of workflow</h2></hgroup><article  id="short-example-of-workflow">
+</article></slide><slide class=''><hgroup><h2>If there is time</h2></hgroup><article  id="if-there-is-time" class="smaller">
 
-</article></slide><slide class=''><hgroup><h2>Resources</h2></hgroup><article  id="resources">
+<p>Should be less than ~7 minutes</p>
+
+<ul>
+<li>Create an html document:
+
+<ul>
+<li>Title</li>
+<li>Subtitle</li>
+<li>Author</li>
+<li>Headers and subheader</li>
+<li>A list with bullets</li>
+<li>Text with old and itallics</li>
+<li>1 plot (nothing meaningful, invent something or use existing data)</li>
+<li>1 <code>knitr</code> + <code>kableExtra</code> table</li>
+</ul></li>
+<li>Extra:
+
+<ul>
+<li>Include an equation</li>
+<li>Code doesn&#39;t show</li>
+<li>Include at least 1 reference from the BibTex file</li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Resources</h2></hgroup><article  id="resources" class="smaller">
+
+<ul>
+<li>Intro to R Markdown:
+
+<ul>
+<li><a href='http://rmarkdown.rstudio.com/lesson-1.html' title=''>Tutorial</a></li>
+</ul></li>
+<li>YAML options:
+
+<ul>
+<li>See <a href='http://rmarkdown.rstudio.com/html_document_format.html' title=''>options for HTML</a></li>
+<li>See <a href='http://rmarkdown.rstudio.com/pdf_document_format.html' title=''>options for PDF</a></li>
+</ul></li>
+<li>References
+
+<ul>
+<li><a href='http://editor.citationstyles.org/about/' title=''>Citation style library</a></li>
+<li>Tyler Clavelle&#39;s <a href='https://tclavelle.github.io/blog/reference_tips/' title=''>tutorial</a></li>
+</ul></li>
+<li>Stargazer
+
+<ul>
+<li>Jake Russ&#39; <a href='http://www.jakeruss.com/cheatsheets/stargazer/' title=''>cheatsheet</a></li>
+</ul></li>
+<li>kableExtra
+
+<ul>
+<li><a href='http://haozhu233.github.io/kableExtra/awesome_table_in_html.html' title=''>For HTML output</a></li>
+<li><a href='http://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf' title=''>For PDF output</a></li>
+</ul></li>
+</ul>
+
+</article></slide><slide class=''><hgroup><h2>Resources</h2></hgroup><article  id="resources-1">
 
 <ul>
 <li><a href='http://rmarkdown.rstudio.com/lesson-1.html' title=''>R Markdown from RStudio tutorial</a></li>

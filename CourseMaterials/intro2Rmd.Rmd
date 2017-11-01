@@ -159,6 +159,16 @@ Gives:
 
 # Hands-on
 
+## Code chunks and in-line code
+
+- `There were "r nrow(mtcars)" cars studied`
+- There were `r nrow(mtcars)` cars studied
+
+- Used to isolate plain text from code
+- Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
+- Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
+- Always name your chunks!
+
 ## References
 
 You need:
@@ -195,16 +205,6 @@ suppressPackageStartupMessages({
   library(kableExtra)
 })
 ```
-
-## Code chunks and in-line code
-
-- `There were "r nrow(mtcars)" cars studied`
-- There were `r nrow(mtcars)` cars studied
-
-- Used to isolate plain text from code
-- Allow you to execute R, Python, Rcpp, SQL, and Stan within your file
-- Use `Ctrl` + `Alt` + `I` (Windows) `Cmd` + `Alt` + `I` (Mac) to insert
-- Always name your chunks!
 
 ## Code chunk options
 
@@ -320,7 +320,39 @@ knitr::kable(taxa_table, format = "html") %>%
   kableExtra::collapse_rows(columns = c(1,2)) #collapse some rowws to delete obvious information
 ```
 
-## Short example of workflow
+## If there is time {.smaller}
+
+Should be less than ~7 minutes
+
+- Create an html document:
+    - Title
+    - Subtitle
+    - Author
+    - Headers and subheader
+    - A list with bullets
+    - Text with old and itallics
+    - 1 plot (nothing meaningful, invent something or use existing data)
+    - 1 `knitr` + `kableExtra` table
+- Extra:
+    - Include an equation
+    - Code doesn't show
+    - Include at least 1 reference from the BibTex file
+
+## Resources {.smaller}
+
+- Intro to R Markdown:
+    - [Tutorial](http://rmarkdown.rstudio.com/lesson-1.html)
+- YAML options:
+    - See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html)
+    - See [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html)
+- References
+    - [Citation style library](http://editor.citationstyles.org/about/)
+    - Tyler Clavelle's [tutorial](https://tclavelle.github.io/blog/reference_tips/)
+- Stargazer
+    - Jake Russ' [cheatsheet](http://www.jakeruss.com/cheatsheets/stargazer/)
+- kableExtra
+    - [For HTML output](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
+    - [For PDF output](http://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
 
 
 ## Resources

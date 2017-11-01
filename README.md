@@ -2,7 +2,26 @@
 
 An introductory [eco-data science](https://eco-data-science.github.io/) course for R markdown
 
+## Resources
+
+### From workshop
 - [Slides](http://jcvdav.github.io/intro2Rmd/CourseMaterials/intro2Rmd.html)
+- [Hands-on file created during the workshop](http://www.villasenor-derbez.com/intro2Rmd/CourseMaterials/hands-on.nb.html)
+
+### External resources
+- Intro to R Markdown:
+    - [Tutorial](http://rmarkdown.rstudio.com/lesson-1.html)
+- YAML options:
+    - See [options for HTML](http://rmarkdown.rstudio.com/html_document_format.html)
+    - See [options for PDF](http://rmarkdown.rstudio.com/pdf_document_format.html)
+- References
+    - [Citation style library](http://editor.citationstyles.org/about/)
+    - Tyler Clavelle's [tutorial](https://tclavelle.github.io/blog/reference_tips/)
+- Stargazer
+    - Jake Russ' [cheatsheet](http://www.jakeruss.com/cheatsheets/stargazer/)
+- kableExtra
+    - [For HTML output](http://haozhu233.github.io/kableExtra/awesome_table_in_html.html)
+    - [For PDF output](http://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf)
 
 ## Getting started
 

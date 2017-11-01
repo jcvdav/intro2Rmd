@@ -2,8 +2,7 @@
 
 An introductory [eco-data science](https://eco-data-science.github.io/) course for R markdown
 
-- [Slides](./CourseMaterials/intro2Rmd.html)
-- [Materials](./CourseMaterials/intro2Rmd.nb.html)
+- [Slides](http://jcvdav.github.io/intro2Rmd/CourseMaterials/intro2Rmd.html)
 
 ## Getting started
 
